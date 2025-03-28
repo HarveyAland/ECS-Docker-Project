@@ -1,0 +1,43 @@
+<!DOCTYPE html> <!-- Declares this is an HTML5 document -->
+<html lang="en"> <!-- Starts the HTML document and sets the language to English -->
+
+<head>
+    <meta charset="UTF-8"> <!-- Ensures the page supports special characters -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Makes the page responsive for mobile devices -->
+    <title>Weather App</title> <!-- Sets the page title (shown in the browser tab) -->
+
+    <style> 
+        /* Style the whole webpage */
+        body {
+            font-family: Arial, sans-serif; /* Sets the font style */
+            text-align: center; /* Centers all text */
+            margin-top: 50px; /* Adds space at the top */
+        }
+
+        /* Style the weather box */
+        .weather-box {
+            display: inline-block; /* Makes the box only as wide as its content */
+            padding: 20px; /* Adds space inside the box */
+            border: 1px solid #ccc; /* Adds a light grey border */
+            border-radius: 10px; /* Rounds the corners */
+            background-color: #f9f9f9; /* Light grey background */
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Weather in {{ city }}</h1> 
+    <!-- Displays the city name from the Flask app -->
+    
+    <div class="weather-box"> 
+        <!-- This box contains the weather details -->
+        
+        <p><strong>Temperature:</strong> {{ temperature }}°C</p>
+        <!-- Displays the temperature from the API -->
+        
+        <p><strong>Condition:</strong> {{ description }}</p>
+        <!-- Displays the weather condition (e.g., "Cloudy") -->
+    </div>
+</body>
+
+</html>
