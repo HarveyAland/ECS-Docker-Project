@@ -1,3 +1,0 @@
-flask # Runs web application 
-requests # Allows your app to fetch weather data from the OpenWeatherMap API
-gunicorn # Provides a more robust server for running Flask in Docker (instead of the built-in development server).
